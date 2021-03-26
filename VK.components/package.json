@@ -11,9 +11,9 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "start-storybook -p 3001",
-		"build:ui": "babel packages/ui --out-dir ../../build/ui --copy-files --relative",
-		"build:amount": "babel business/amount --out-dir ../../build/amount --copy-files --relative",
-		"build:core": "babel packages/core --out-dir ../../build/core --copy-files --relative",
+		"build:ui": "babel packages/ui --out-dir ../../dist/ui --copy-files --relative",
+		"build:amount": "babel business/amount --out-dir ../../dist/amount --copy-files --relative",
+		"build:core": "babel packages/core --out-dir ../../dist/core --copy-files --relative",
 		"build-storybook": "build-storybook"
 	},
 	"keywords": [],
