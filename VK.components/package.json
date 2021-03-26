@@ -1,0 +1,42 @@
+{
+	"name": "storybook-sample",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"private": true,
+	"workspaces": [
+		"packages/*",
+		"business/*"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "start-storybook -p 3001",
+		"build:ui": "babel packages/ui --out-dir ../../build/ui --copy-files --relative",
+		"build:amount": "babel business/amount --out-dir ../../build/amount --copy-files --relative",
+		"build:core": "babel packages/core --out-dir ../../build/core --copy-files --relative",
+		"build-storybook": "build-storybook"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/cli": "^7.13.10",
+		"@babel/core": "^7.13.10",
+		"@babel/plugin-transform-runtime": "^7.12.1",
+		"@babel/preset-env": "^7.12.1",
+		"@babel/preset-react": "^7.12.1",
+		"@babel/preset-flow": "^7.12.13",
+		"@storybook/addon-actions": "^6.2.0-rc.10",
+		"@storybook/addon-essentials": "^6.2.0-rc.10",
+		"@storybook/addon-links": "^6.2.0-rc.10",
+		"@storybook/builder-webpack5": "^6.2.0-rc.10",
+		"@storybook/react": "^6.2.0-rc.10",
+		"babel-loader": "^8.2.2",
+		"webpack": "^5.4.0"
+	},
+	"dependencies": {
+		"@babel/runtime": "7.13.9",
+		"react": "17.0.1",
+		"react-dom": "17.0.1"
+	}
+}
