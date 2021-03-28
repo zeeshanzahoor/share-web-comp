@@ -1,15 +1,7 @@
 import React from 'react';
-import { Print, Core } from '@vakif/core';
 export const Input = () => {
-	React.useEffect(() => {
-		Print('hellow');
+	React.useCallback(() => {
+		console.log('hellow world');
 	});
-	const [value, setValue] = React.useState('');
-	return (
-		<input
-			value={value}
-			onChange={(event) => setValue(event.target.value)}
-			type='text'
-		></input>
-	);
+	return <input style={{ border: '1px solid green' }} type='text'></input>;
 };
